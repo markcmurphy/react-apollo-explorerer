@@ -16,12 +16,14 @@ export default function App() {
   }
 }
 `,
-        variables: { 'Variable1': 'ExampleValue' },
-        headers: { 'Header1': 'ExampleValue' },
+        variables: { 'Variable1': 'ExampleValue' },        
+          headers: {
+            authorization: 'Bearer abc123'
+          },
         displayOptions: {
           showHeadersAndEnvVars: true, 
           docsPanelState: 'open', 
-          theme: 'light',
+          theme: 'dark',
         },
       }}
     />
