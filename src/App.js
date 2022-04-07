@@ -1,29 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState }from 'react';
 import './style.css';
 import { ApolloExplorerReact } from '@apollo/explorer';
 
 export default function App() {
+  const [token, setToken] = useState('');
+  const [document, setDocument] = useState(`query Site {
+    site {
+      products {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+    }
+  }
+`);
+  const queryParams = new URLSearchParams(window.location.search)
+  const term = queryParams.get("token")
+  
+  setToken(term);
+
+
+  // const location = queryParams.get("location")
+
   return (
     <ApolloExplorerReact
       graphRef="My-Graph-aj8l5j@current"
       endpointUrl="https://bc.murphymark.me/graphql"
-      persistExplorerState={true}
-      style={{ height: '100vh' }}
+      persistExplorerState={false}
       initialState={{
-        document: `query Site {
-          site {
-            products {
-              edges {
-                node {
-                  name
-                }
-              }
-            }
-          }
-        }
-`,        
+        document: {document},        
         headers: {
-          authorization: 'Bearer abc123',
+          authorization: `${token}`,
         },
         displayOptions: {
           showHeadersAndEnvVars: true,
