@@ -16,10 +16,10 @@ export default function App() {
     }
   }
 `);
-  const queryParams = new URLSearchParams(window.location.search)
-  const term = queryParams.get("token")
+//   const queryParams = new URLSearchParams(window.location.search)
+//   const term = queryParams.get("token")
   
-  setToken(term);
+//   setToken(term);
 
 
   // const location = queryParams.get("location")
