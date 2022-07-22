@@ -4,6 +4,7 @@ h1,
 p,
 label,
 input,
+span,
 textarea,
 button {
   font-family: 'Source Sans Pro', sans-serif;
@@ -12,28 +13,6 @@ button {
 body {
   background-color: #060f2f;
   color: #fff;
-}
-
-.h-full.w-full.theme-container-dark
-  .z-50.flex.h-12.items-center.gap-2.bg-midnight-darker.pr-2.text-white.transition-background {
-  display: none;
-}
-
-.embedded-explorer {
-  width: 100vw;
-  height: 85vh;
-  margin: auto;
-}
-
-form {
-  /* border-bottom: #383d5b 1px solid; */
-  padding: 1%;
-}
-
-h1 {
-  padding-left: 1%;
-  margin-bottom: 0%;
-  font-size: 1.5rem;
 }
 
 p {
@@ -48,35 +27,14 @@ input {
   border: rgb(86, 105, 146) 1px solid;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  /* font-size: 100%; */
-  /* font-weight: inherit; */
-  /* line-height: inherit; */
-  /* margin: 0; */
-  /* padding: 0; */
-  /* font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif; */
-  /* outline: none; */
-  /* -webkit-font-smoothing: antialiased; */
-  /* height: 1.75rem; */
-  /* min-width: 25rem; */
   background-color: transparent;
   --tw-text-opacity: 1;
   color: rgb(180 195 219 / var(--tw-text-opacity));
-  /* padding-left: 1%; */
-  /* padding-right: 1%; */
-  /* -webkit-text-size-adjust: 100%; */
-  /* tab-size: 4; */
-  /* -webkit-font-smoothing: antialiased; */
-  font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  /* color: rgb(255 255 255/var(--tw-text-opacity)); */
-  /* border: 0 solid #888f9a; */
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  /* display: flex; */
-  /* height: 1.75rem; */
   min-width: 25rem;
-  /* align-items: center; */
   border-radius: 0.25rem;
   border-width: 1px;
   border-color: rgb(86 105 146 / var(--tw-border-opacity));
@@ -117,6 +75,33 @@ button {
   white-space: nowrap;
 }
 
-#root > div {
+/* #root > div {
   height: 100vh;
+} */
+
+
+.embedded-explorer {
+  width: 97vw;
+  /* overflow-y: hidden; */
+  height: 90vh;
+  margin: auto;
+  font-size: 1.25rem;
+}
+
+.top-form {
+  height: 6vh;
+  /* height: 10vh; */
+}
+
+form {
+  /* border-bottom: #383d5b 1px solid; */
+  padding-left: 1%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+h1, .h1-style {
+  padding-left: 1%;
+  margin-bottom: 0%;
+  font-size: 1.2rem;
 }
